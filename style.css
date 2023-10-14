@@ -1,0 +1,91 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+.headbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    justify-content:space-between;
+}
+
+[type="menu"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.island{
+    
+    display: flex;
+    box-sizing: border-box;
+    background-color: var(--island-bg-color);
+    box-shadow: var(--shadow-island);
+    border-radius: var(--border-radius-lg);
+    padding: calc(var(--padding) * var(--space-factor));
+    position: relative;
+    transition: box-shadow .5s ease-in-out;
+}
+#lock,#hand,#arrow,#rectangle,#diamond,#circle,#arrow_right,#hori_line,#draw_pen,#text,#image,#eraser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+     
+}
+
+#live_collaboration,#library{
+    display: flex;
+   
+    align-items: center;
+    padding:15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+
+}
+#info{
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    padding-top: 10px;
+    display: flex;
+}
+#site_name{
+    font-style:italic;
+    text-align: center;
+    justify-content: center;
+    color: blue;
+    padding-top: 80px;
+
+}
+#site_info{
+    font-style:italic;
+    text-align: center;
+    justify-content: center;
+    color:gray;
+    padding-top: 10px;
+
+}
+#site_options{
+    padding-top: 20px;
+    column-gap: 0.5rem;
+    justify-content: center;
+    text-align: center;
+}
+#footer{
+    position: relative;
+    padding-top: 50%;
+    border: none;
+    display: flex;
+}
