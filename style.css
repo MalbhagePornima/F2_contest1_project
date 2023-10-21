@@ -2,90 +2,130 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 
-.headbar{
+  * {
+    margin: 0;
+    padding: 0;
+}
+#root {
+    width: 100vw ;
+    height: 100vh;
+    overflow: hidden;
+    position: relative ;
+}
+#top {
+    position: absolute;
+    width: 100vw;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding-top: 10px;
+    justify-content: space-between;
+    z-index: 10;
+    padding: 10px;
+}
+#top > .options{ 
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    border-radius: 10px;
+    padding: 4px 20px; 
+    box-shadow: 2px 2px 6px #E1E1E1;
+}
+#top>.options_2{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: #d1d1f2;
+    padding: 4px 20px;
+    gap: 10px; 
+}
+.options_2>.people{
+    background-color: #3a34eb;
+    color: #d1d1f2;
+    border-radius: 8px;
+    padding:12px ;
+}
+.options_2>.library{
+    
+    background-color: #e9e9fa;
+    border-radius: 8px;
+    padding:5px;
+    font-size: 0.75rem;
+    letter-spacing: .4px;
+    border-width: 1px;
+    border-style: solid;
+    box-sizing: border-box;
+    border: none;
+    color: rgb(119, 114, 114);
+}
+#top>.menu {
+    background-color: #e9e9fa;
+    border-radius: 8px;
+    padding:10px;
+    border-radius: 4px;
+}
+.btn {
+    border: none ;
+    padding: 4px 6px; 
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px !important;
+}
+.btn:hover{
+    background-color: #ECECF3;
+    border-radius: 4px;
+}
+.active {
+    background-color: #3a34eb;
+    border-radius: 4px;
+    color: white;
+}
+
+#bottom {
+   justify-content: space-between;
+   align-items: center;
+   width: 100vw;
+    position: absolute;
+    z-index: 100;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+
+}
+#bottom > .options {
+    background-color: #e8e8fc;
+    padding: 4px 10px;
+    border-radius: 10px;
+    gap: 10px;
+    padding:10px;
     justify-content:space-between;
 }
-
-[type="menu"]{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding:15px;
-    margin-top: 10px;
-    margin-left: 10px;
-    border: none;
-    border-radius: 5px;
-}
-.island{
-    
-    display: flex;
-    box-sizing: border-box;
-    background-color: var(--island-bg-color);
-    box-shadow: var(--shadow-island);
-    border-radius: var(--border-radius-lg);
-    padding: calc(var(--padding) * var(--space-factor));
-    position: relative;
-    transition: box-shadow .5s ease-in-out;
-}
-#lock,#hand,#arrow,#rectangle,#diamond,#circle,#arrow_right,#hori_line,#draw_pen,#text,#image,#eraser{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding:15px;
-    margin-top: 10px;
-    margin-left: 10px;
-    border: none;
-    border-radius: 5px;
-     
-}
-
-#live_collaboration,#library{
+#bottom > .options_3 {
+   
+    padding: 4px 10px;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 10px;
+    justify-content:space-between;
     display: flex;
    
-    align-items: center;
-    padding:15px;
-    margin-top: 10px;
-    margin-left: 10px;
+}
+ .options_3>.help{
+   
+    justify-content:space-between;
+    box-sizing: border-box;
+    border:none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(235, 233, 233);
+    right: 20px;
+   
+    
+}
+.options_3>.encryption{
+   color: #3a34eb;
+    padding: 4px 10px;
+    border-radius: 10px;
+    gap: 10px;
     border: none;
-    border-radius: 5px;
-
-}
-#info{
-    justify-content: center;
-    align-items: center;
-    color: grey;
-    padding-top: 10px;
-    display: flex;
-}
-#site_name{
-    font-style:italic;
-    text-align: center;
-    justify-content: center;
-    color: blue;
-    padding-top: 80px;
-
-}
-#site_info{
-    font-style:italic;
-    text-align: center;
-    justify-content: center;
-    color:gray;
-    padding-top: 10px;
-
-}
-#site_options{
-    padding-top: 20px;
-    column-gap: 0.5rem;
-    justify-content: center;
-    text-align: center;
-}
-#footer{
-    position: relative;
-    padding-top: 50%;
-    border: none;
-    display: flex;
+    
 }
