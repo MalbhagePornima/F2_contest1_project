@@ -1,5 +1,5 @@
 
-* {
+ * {
     margin: 0;
     padding: 0;
 }
@@ -30,13 +30,14 @@
     gap: 10px; 
     border-radius: 10px;
     padding: 4px 20px; 
+    border: 1px solid #ededed;
     box-shadow: 2px 2px 6px #E1E1E1;
 }
 .menu {
     background-color: #ECECF3;
     border-radius: 4px;
 }
-.btn {
+#top button {
     border: none ;
     padding: 4px 6px; 
     background-color: transparent;

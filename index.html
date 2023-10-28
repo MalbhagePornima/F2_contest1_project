@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Excalidraw</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -16,54 +16,73 @@
   </head>
   <body>
     <div id="root">
+
       <div id="top">
-        <button class="material-icons menu btn" onclick="toggleMenu()">
+
+         <button class="material-icons menu btn" onclick="toggleMenu()">
           menu
         </button>
+
         <div class="options" id="actionbuttons">
+
           <button
             class="btn material-icons"
             id="freehand"
-            onclick="onActionClick(this)"
-          >
+            onclick="onActionClick(this)"> 
             edit
           </button>
+
           <button
             id="circle"
             class="btn material-symbols-outlined"
             onclick="onActionClick(this)"
-          >
-            brightness_1
+          > brightness_1
           </button>
+
           <button
             id="rectangle"
             class="btn material-symbols-outlined"
             onclick="onActionClick(this)"
-          >
-            check_box_outline_blank
+          >check_box_outline_blank
           </button>
+
           <button
             onclick="onActionClick(this)"
             class="btn material-symbols-outlined"
             id="line"
-          >
-            pen_size_2
+          >pen_size_2
           </button>
+
           <button
             id="eraser"
             class="btn material-symbols-outlined"
-            onclick="onActionClick(this)"
-          >
+            onclick="onActionClick(this)">
             ink_eraser
           </button>
+
         </div>
-        <div></div>
+     
+        <button id="people" class="material-symbols-outlined" onclick="onActionClick(this)">groups</button>
+
+        <div>
+
+          <button class="material-symbols-outlined">
+               two_pager 
+           </button>
+           <span>Library</span>
+
+        </div>
+
       </div>
+
       <canvas id="canvas"></canvas>
-      <div id="bottom">
+        <div id="bottom">
+
         <div class="options">
+
           <button class="btn material-icons" id="undo">undo</button>
           <button class="btn material-icons" id="redo">redo</button>
+
         </div>
       </div>
     </div>
@@ -87,7 +106,7 @@
       />
     </div>
 
-     <script src="./index.js"></script>
+     <script src="./script.js"></script>
     <script src="freehand.js"></script>
     <script src="undoredo.js"></script>
     <script src="state.js"></script>
