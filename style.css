@@ -12,6 +12,12 @@
     overflow: hidden;
     position: relative ;
 }
+
+#canvas {
+    /* cursor: crosshair; */
+    object-fit: contain;
+}
+
 #top {
     position: absolute;
     width: 100vw;
@@ -58,7 +64,7 @@
     color: rgb(119, 114, 114);
 }
 #top>.menu {
-    background-color: #e9e9fa;
+    background-color: #ECECF3;
     border-radius: 8px;
     padding:10px;
     border-radius: 4px;
@@ -73,6 +79,11 @@
 .btn:hover{
     background-color: #ECECF3;
     border-radius: 4px;
+    
+}
+#canvas{
+    text-align: center;
+    
 }
 .active {
     background-color: #3a34eb;
@@ -92,7 +103,7 @@
 
 }
 #bottom > .options {
-    background-color: #e8e8fc;
+    background-color: #d1d1f2;
     padding: 4px 10px;
     border-radius: 10px;
     gap: 10px;
@@ -128,4 +139,20 @@
     gap: 10px;
     border: none;
     
+}
+
+.form {
+    position: fixed;
+    left: 10px;
+    top: 30vh ;
+    border: 1px solid #ededed;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.hide {
+    display: none;
 }

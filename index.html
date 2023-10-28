@@ -17,20 +17,20 @@
     <div id="root">
         <div id="top">
 
-            <button class="material-icons menu btn">menu</button>
+            <button class="material-icons menu btn" onclick="toggleMenu()">menu</button>
 
-            <div class="options">
+            <div class="options" id="actionbuttons">
                 <button class="btn material-symbols-outlined">lock</button>
                 <button class="btn material-symbols-outlined"> back_hand</button>
                 <button class="btn material-symbols-outlined">arrow_insert</button>
                 <button class="btn material-symbols-outlined">crop_5_4</button>
-                <button class="btn material-icons" id="pencil">edit</button>
-                <button class="btn material-symbols-outlined">brightness_1</button>
+                <button class="btn material-icons" id="freehand" onclick="onActionClick(this)">edit</button>
+                <button class="btn material-symbols-outlined"  id="circle" onclick="onActionClick(this)">brightness_1</button>
                 <button class="btn material-symbols-outlined">arrow_forward</button>
                 <button class="btn material-symbols-outlined"> horizontal_rule</button>
-                <button class="btn material-symbols-outlined">check_box_outline_blank</button>
+                <button class="btn material-symbols-outlined" id="rectangle" onclick="onActionClick(this)" >check_box_outline_blank</button>
                 <button class="btn material-symbols-outlined">imagesmode</button>
-                <button class="btn material-symbols-outlined">ink_eraser</button>
+                <button id="eraser" class="btn material-symbols-outlined" onclick="onActionClick(this)" >ink_eraser</button>
                 <button class="btn material-symbols-outlined"> category</button>
                 <input type="color" id="color-picker">
 
@@ -43,12 +43,14 @@
                 </div>
             </div>
 
+           
         </div>
-        <p>Hold Alt to revert the elements marked for deletion </p>
-        <div class="middle">
 
-        </div>
-        <canvas id="canvas"></canvas>
+        <canvas id="canvas">
+            <div class="middle">
+                <p>Hold Alt to revert the elements marked for deletion </p>
+            </div>
+        </canvas>
 
         <div id="bottom">
             <div class="options">
@@ -58,8 +60,8 @@
             </div>
 
             <div class="options">
-                <button class="btn material-icons">undo</button>
-                <button class="btn material-icons">redo</button>
+                <button class="btn material-icons" id="undo">undo</button>
+                <button class="btn material-icons" id="redo">redo</button>
             </div>
 
             
@@ -71,10 +73,35 @@
                 <button class="btn help material-symbols-outlined">help</button>
              
             </div>
+           
         </div>
+       
     </div>
+
+    <div class="form hide">
+        <label for="strokewidth">Stroke Width</label>
+        <input
+          type="range"
+          id="strokewidth"
+          name="strokewidth"
+          min="3"
+          max="10"
+          oninput="onInput(this)"
+        />
+        <label for="strokestyle">Stroke Color</label>
+        <input
+          type="color"
+          name="strokestyle"
+          id="strokestyle"
+          oninput="onInput(this)"
+        />
+      </div>
+      
     <script src="./script.js"></script>
     <script src="./freehand.js"></script>
+    <script src="./drawing.js"></script>
+    <script src="./state.js"></script>
+
 </body>
 
 </html>
