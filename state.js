@@ -43,6 +43,7 @@ function onActionClick(element) {
             btn.classList.remove("active");
         }
     })
+    
     element.classList.toggle("active");
 
     actionButtons.forEach(btn => {

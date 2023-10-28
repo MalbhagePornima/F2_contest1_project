@@ -45,6 +45,7 @@ function onMouseDown(e) {
     previousPosition = [ e.clientX , e.clientY];
     c.strokeStyle = drawingColor;
     c.lineWidth = 2; 
+    intialCount = pathCount;
     canvas.addEventListener("mousemove", onMouseMove);
     canvas.addEventListener("mouseup", onMouseUp); 
 }
@@ -53,6 +54,7 @@ function onMouseMove(e){
     // for the first time inside this  
     let currentPosition = [ e.clientX , e.clientY ];
     // draw line from previous position to current position ;
+    if (options.isFreeHandDrawing) {
     c.beginPath();
     c.moveTo(...previousPosition);
     c.lineTo(...currentPosition);
@@ -64,6 +66,7 @@ function onMouseMove(e){
 
 if (options.isRectangleDrawing) {
     drawRectangle(currentPosition);
+}
 }
 
 function drawRectangle(currentPosition) {
@@ -86,20 +89,3 @@ function onMouseUp(e){
     pathCount++;
 }
 
-const undo = document.getElementById("undo")
-const redo = document.getElementById("redo")
-
-function onUndo(){
-    if(pathCount) {
-        drawingHistory.pop();
-        pathCount -- ;
-        if(pathCount === 0) {
-            c.clearRect(0, 0, canvas.width, canvas.height);
-        }
-        else {
-            c.putImageData(drawingHistory[pathCount - 1], 0, 0)
-        }
-    }
-}
-
-undo.addEventListener("click",onUndo)
