@@ -1,8 +1,5 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-
-  * {
+* {
     margin: 0;
     padding: 0;
 }
@@ -12,7 +9,6 @@
     overflow: hidden;
     position: relative ;
 }
-
 #canvas {
     /* cursor: crosshair; */
     object-fit: contain;
@@ -36,37 +32,8 @@
     padding: 4px 20px; 
     box-shadow: 2px 2px 6px #E1E1E1;
 }
-#top>.options_2{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border: #d1d1f2;
-    padding: 4px 20px;
-    gap: 10px; 
-}
-.options_2>.people{
-    background-color: #3a34eb;
-    color: #d1d1f2;
-    border-radius: 8px;
-    padding:12px ;
-}
-.options_2>.library{
-    
-    background-color: #e9e9fa;
-    border-radius: 8px;
-    padding:5px;
-    font-size: 0.75rem;
-    letter-spacing: .4px;
-    border-width: 1px;
-    border-style: solid;
-    box-sizing: border-box;
-    border: none;
-    color: rgb(119, 114, 114);
-}
-#top>.menu {
+.menu {
     background-color: #ECECF3;
-    border-radius: 8px;
-    padding:10px;
     border-radius: 4px;
 }
 .btn {
@@ -79,11 +46,6 @@
 .btn:hover{
     background-color: #ECECF3;
     border-radius: 4px;
-    
-}
-#canvas{
-    text-align: center;
-    
 }
 .active {
     background-color: #3a34eb;
@@ -92,54 +54,17 @@
 }
 
 #bottom {
-   justify-content: space-between;
-   align-items: center;
-   width: 100vw;
     position: absolute;
     z-index: 100;
     left: 20px;
     bottom: 20px;
-    display: flex;
-
 }
 #bottom > .options {
     background-color: #d1d1f2;
     padding: 4px 10px;
-    border-radius: 10px;
-    gap: 10px;
-    padding:10px;
-    justify-content:space-between;
+    border-radius: 5px;
 }
-#bottom > .options_3 {
-   
-    padding: 4px 10px;
-    border-radius: 10px;
-    gap: 10px;
-    padding: 10px;
-    justify-content:space-between;
-    display: flex;
-   
-}
- .options_3>.help{
-   
-    justify-content:space-between;
-    box-sizing: border-box;
-    border:none;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: rgb(235, 233, 233);
-    right: 20px;
-   
-    
-}
-.options_3>.encryption{
-   color: #3a34eb;
-    padding: 4px 10px;
-    border-radius: 10px;
-    gap: 10px;
-    border: none;
-    
-}
+
 
 .form {
     position: fixed;

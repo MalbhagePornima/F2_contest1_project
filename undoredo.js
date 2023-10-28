@@ -14,4 +14,4 @@ function onUndo(){
     }
 }
 
-undo.addEventListener("click",onUndo)
+undo.addEventListener("click",onUndo);

@@ -1,3 +1,4 @@
+
 let intialPosition = null;
 
 // this arrays will hold the image objects after every mouse up.

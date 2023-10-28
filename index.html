@@ -1,119 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Excalidraw</title>
-    <link rel="stylesheet" href="./style.css">
-
-    <link 
-    href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
     />
-
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-         />
-</head>
-
-<body>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
     <div id="root">
-        <div id="top">
-
-            <button class="material-icons menu btn" onclick="toggleMenu()">
-                menu
-            </button>
-
-            <div class="options" id="actionbuttons">
-                <!-- <button class="btn material-symbols-outlined">lock</button>
-                <button class="btn material-symbols-outlined"> back_hand</button>
-                <button class="btn material-symbols-outlined">arrow_insert</button>
-                
-                <button class="btn material-symbols-outlined" id="rectangle" onclick="onActionClick(this)" >check_box_outline_blank</button>
-                
-                <button class="btn material-symbols-outlined"  id="circle" onclick="onActionClick(this)">brightness_1</button>
-                <button class="btn material-symbols-outlined">arrow_forward</button>
-                <button class="btn material-symbols-outlined"> horizontal_rule</button>
-               
-                <button class="btn material-icons" id="freehand" onclick="onActionClick(this)">edit</button>
-                <button class="btn material-symbols-outlined">imagesmode</button>
-                <button id="eraser" class="btn material-symbols-outlined" onclick="onActionClick(this)" >ink_eraser</button>
-                <button class="btn material-symbols-outlined"> category</button> */
-                <input type="color" id="color-picker"> -->
-
-                <button class="btn material-icons" id="freehand" onclick="onActionClick(this)">
-                    edit
-                </button>
-                <button id="circle" class="btn material-symbols-outlined" onclick="onActionClick(this)">
-                    brightness_1
-                </button>
-                <button id="rectangle" class="btn material-symbols-outlined" onclick="onActionClick(this)">
-                    check_box_outline_blank
-                </button>
-                <button onclick="onActionClick(this)" class="btn material-symbols-outlined" id="line">
-                    pen_size_2
-                </button>
-                <button id="eraser" class="btn material-symbols-outlined" onclick="onActionClick(this)">
-                    ink_eraser
-                </button>
-            </div>
-
-
-
-            <div class="options_2">
-                <button class="btn bg-primary material-symbols-outlined people">group</button>
-                <div class="library">
-                    <button class="btn material-symbols-outlined">menu_book</button>Library
-                </div>
-            </div>
-
+      <div id="top">
+        <button class="material-icons menu btn" onclick="toggleMenu()">
+          menu
+        </button>
+        <div class="options" id="actionbuttons">
+          <button
+            class="btn material-icons"
+            id="freehand"
+            onclick="onActionClick(this)"
+          >
+            edit
+          </button>
+          <button
+            id="circle"
+            class="btn material-symbols-outlined"
+            onclick="onActionClick(this)"
+          >
+            brightness_1
+          </button>
+          <button
+            id="rectangle"
+            class="btn material-symbols-outlined"
+            onclick="onActionClick(this)"
+          >
+            check_box_outline_blank
+          </button>
+          <button
+            onclick="onActionClick(this)"
+            class="btn material-symbols-outlined"
+            id="line"
+          >
+            pen_size_2
+          </button>
+          <button
+            id="eraser"
+            class="btn material-symbols-outlined"
+            onclick="onActionClick(this)"
+          >
+            ink_eraser
+          </button>
         </div>
-
-    </div>
-
-    </div>
-
-    <canvas id="canvas"></canvas>
-
-
-    <div id="bottom">
+        <div></div>
+      </div>
+      <canvas id="canvas"></canvas>
+      <div id="bottom">
         <div class="options">
-            <button class="btn material-symbols-outlined">remove</button>
-            <button class="btn 100">100%</button>
-            <button class="btn material-symbols-outlined">add</button>
+          <button class="btn material-icons" id="undo">undo</button>
+          <button class="btn material-icons" id="redo">redo</button>
         </div>
-
-        <div class="options">
-            <button class="btn material-icons" id="undo">undo</button>
-            <button class="btn material-icons" id="redo">redo</button>
-        </div>
-
-
-
-        <div class="options_3">
-
-            <button class="btn encryption material-symbols-outlined">encrypted</button>
-
-            <button class="btn help material-symbols-outlined">help</button>
-
-        </div>
-
-    </div>
-
+      </div>
     </div>
 
     <div class="form hide">
-        <label for="strokewidth">Stroke Width</label>
-        <input type="range" id="strokewidth" name="strokewidth" min="3" max="10" oninput="onInput(this)" />
-        <label for="strokestyle">Stroke Color</label>
-        <input type="color" name="strokestyle" id="strokestyle" oninput="onInput(this)" />
+      <label for="strokewidth">Stroke Width</label>
+      <input
+        type="range"
+        id="strokewidth"
+        name="strokewidth"
+        min="3"
+        max="10"
+        oninput="onInput(this)"
+      />
+      <label for="strokestyle">Stroke Color</label>
+      <input
+        type="color"
+        name="strokestyle"
+        id="strokestyle"
+        oninput="onInput(this)"
+      />
     </div>
 
-    <script src="./script.js"></script>
-    <script src="./freehand.js"></script>
-    <script src="./drawing.js"></script>
-    <script src="./state.js"></script>
-
-</body>
-
+    <!-- <script src="./index.js"></script>
+    <script src="freehand.js"></script>
+    <script src="undoredo.js"></script> -->
+    <script src="state.js"></script>
+    <script src="drawing.js"></script>
+  </body>
 </html>
